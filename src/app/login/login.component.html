@@ -1,27 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Login Form</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
+<app-header></app-header>
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-md-6">
@@ -43,27 +20,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 offset-lg-3 centered-form">
-
-      <form [formGroup]="userForm" class="login-form mt-5">
-        <div class="form-group">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" id="username" name="username" ngModel required class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" name="password" ngModel required class="form-control">
-        </div>
-
-        <button type="submit" class="btn btn-primary" (click)="userSubmit()">Login</button>
-      </form>
-      
-    </div>
-  </div>
-</div> -->
