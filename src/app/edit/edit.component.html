@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="container" *ngIf="isDataLoaded"> <!-- Hanya tampilkan formulir setelah data dimuat -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class=" p-4 rounded border mt-2">
+        <h2 class="text-center mb-4">Edit User</h2>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username" [(ngModel)]="user.username">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="user.email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password" [(ngModel)]="user.password">
+        </div>
+        <div class="mb-3 text-center">
+          <button class="btn btn-success px-5" (click)="editUser()">Edit User</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  

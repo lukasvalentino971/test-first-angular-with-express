@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    EditComponent,
     
   ],
   imports: [
