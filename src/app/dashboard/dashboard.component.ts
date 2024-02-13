@@ -80,10 +80,20 @@ export class DashboardComponent implements OnInit {
   }
 
 
+  searchUsers() {
+    this.http.get(`http://localhost:3000/user/search?query=${this.searchTerm}`)
+      .subscribe((response: any) => {
+        this.users = response;
+      }, error => {
+        console.log(error);
+      });
+  }
+
   get filteredUsers(): any[] {
     return this.users.filter((user: any) =>
       user.username.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
       user.email.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
+  
 }

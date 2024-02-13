@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
+    <div class="col-md-15">
       <div [ngSwitch]="alertType">
         <div *ngSwitchCase="'success'" class="alert alert-success alert-dismissible" role="alert">
           User created successfully!
@@ -47,8 +47,9 @@
     </div>
     <div class="d-flex">
       <input type="text" class="form-control me-2" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" [(ngModel)]="searchTerm">
-      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="searchUsers()">Search</button>
     </div>
+    
   </div>
 
   <table class="table table-striped">
@@ -61,7 +62,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
+      <tr *ngFor="let user of filteredUsers">
         <th scope="row">{{ user.id }}</th>
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
@@ -71,6 +72,7 @@
         </td>
       </tr>
     </tbody>
+    
   </table>
 </div>
 
